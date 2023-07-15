@@ -20,7 +20,7 @@ md"
 "
 
 # ╔═╡ a391201a-cc38-4267-bd7e-ba0f5c04fa76
-B = 10; b = 1; C = 0.05; k = 5; r = 0.5; f = 2.5; p = 0.5; n = 15
+B = 15; b = 1; C = 0.01; k = 5; r = 0.5; f = 1.0; p = 0.5; n = 30
 
 # ╔═╡ 2f179f34-cdf1-4298-be67-78e3ca9b99e4
 begin
@@ -55,14 +55,14 @@ begin
 		color=loner_color
 	)
 	plot!(
-		1:1:15, 
-		rs.v_S.(p, 1:1:15, B=B, b=b, C=C, r=r, f=f),
+		0:1:30, 
+		rs.v_S.(p, 0:1:30, B=B, b=b, C=C, r=r, f=f),
 		lw=2,
 		color=sharer_color
 	)
 	scatter!(
-		1:1:15, 
-		rs.v_S.(p, 1:1:15, B=B, b=b, C=C, r=r, f=f),
+		0:1:30, 
+		rs.v_S.(p, 0:1:30, B=B, b=b, C=C, r=r, f=f),
 		label="sharer",
 		xlab="k", 
 		#ylab="payoff", 
