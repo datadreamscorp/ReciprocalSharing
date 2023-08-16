@@ -145,17 +145,15 @@ bary.plotsim(1/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35
 bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 
-bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 #bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
-bary.plotsim(1/20, 1/3.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
-#bary.plotsim(1/20, 1/2.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
-bary.plotsim(1/20, 1/2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 #bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 
 #bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 #bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
-bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 
 bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
