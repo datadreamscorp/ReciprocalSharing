@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.19
+# v0.19.27
 
 using Markdown
 using InteractiveUtils
@@ -8,9 +8,11 @@ using InteractiveUtils
 begin
 	using Pkg
 	Pkg.activate("..")
+	#Pkg.instantiate()
 	using Revise
 	using Plots, Colors
-	import ReciprocalSharing as rs
+	#import ReciprocalSharing as rs
+	include("../src/sharer_loner_functions.jl")
 end
 
 # ╔═╡ f2a2b56e-2b26-4673-abb6-ea8ef909bb40
@@ -30,7 +32,7 @@ begin
 	
 	p_plot = plot(
 		0:0.01:1, 
-		rs.v_L.(0:0.01:1, B=B, b=b, r=r), 
+		v_L.(0:0.01:1, B=B, b=b, r=r), 
 		xlab="p", 
 		ylab="payoff", 
 		label="loner",
@@ -40,7 +42,7 @@ begin
 	)
 	plot!(
 		0:0.01:1, 
-		rs.v_S.(0:0.01:1, k, B=B, b=b, C=C, r=r, f=f),
+		v_S.(0:0.01:1, k, B=B, b=b, C=C, r=r, f=f),
 		label="sharer",
 		lw=2,
 		color=sharer_color
@@ -48,7 +50,7 @@ begin
 	annotate!(0.25, 2.5, text("k = $k", 8))
 
 	k_plot = hline(
-		[rs.v_L(p, B=B, b=b, r=r)],
+		[v_L(p, B=B, b=b, r=r)],
 		label="loner", 
 		lw=2, 
 		legend=false,
@@ -56,13 +58,13 @@ begin
 	)
 	plot!(
 		0:1:30, 
-		rs.v_S.(p, 0:1:30, B=B, b=b, C=C, r=r, f=f),
+		v_S.(p, 0:1:30, B=B, b=b, C=C, r=r, f=f),
 		lw=2,
 		color=sharer_color
 	)
 	scatter!(
 		0:1:30, 
-		rs.v_S.(p, 0:1:30, B=B, b=b, C=C, r=r, f=f),
+		v_S.(p, 0:1:30, B=B, b=b, C=C, r=r, f=f),
 		label="sharer",
 		xlab="k", 
 		#ylab="payoff", 
@@ -72,7 +74,7 @@ begin
 	
 
 	x_plot = hline(
-		[rs.v_L(p, B=B, b=b, r=r)], 
+		[v_L(p, B=B, b=b, r=r)], 
 		label="loner", 
 		lw=2, 
 		xlim=(0.0, 1.0),
@@ -80,7 +82,7 @@ begin
 	)
 	plot!(
 		0:0.01:1, 
-		rs.w_S.(0:0.01:1, n, p, B=B, b=b, C=C, r=r, f=f),
+		w_S.(0:0.01:1, n, p, B=B, b=b, C=C, r=r, f=f),
 		label="sharer",
 		xlab="x", 
 		ylab="payoff", 
