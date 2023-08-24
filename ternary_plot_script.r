@@ -90,53 +90,14 @@ sharing.game.exp <- function(x, y, z, w0=0, p=0.5, n=10, B=20, b=1, gamma=0.5, c
   return( c(w1,w2,w3) )
 }
 
-###############################################################################
-
-#c = 0.01
-bary.init()
-bary.labels("Sharer","Loner","Hoarder")
-bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(0, 2.5/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-
-bary.plotsim(1/20, 1/3, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/20, 1/2.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/20, 1/2, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-
-bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
-bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game)
 
 
-#c = 0.01, n= 35
-bary.init()
-bary.labels("Sharer","Loner","Hoarder")
-bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-
-bary.plotsim(1/20, 1/3, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/20, 1/2.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/20, 1/2, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-
-bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-
-bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
-bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game, n=35)
+########################################################## GRAFICOS
 
 
-#c = 0.01, n= 35
+#################################################### w = 0.99
+
+#c = 0.05, n= 35
 bary.init()
 bary.labels("Sharer","Loner","Hoarder")
 bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
@@ -159,42 +120,576 @@ bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n
 bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35)
 
+#c = 0.05, n= 35, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(1/100, 99/100, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(1/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(99/100, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(0, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE)
+
+
 
 #c = 0.03, n = 35
 bary.init()
 bary.labels("Sharer","Loner","Hoarder")
-bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35)
 
-bary.plotsim(1/20, 1/3, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/20, 1/2.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/20, 1/2, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
 
-bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
 
-bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
-bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game, c = 0.03, n = 35)
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35)
+
+#c = 0.03, n = 35, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35)
 
 
 
+#c = 0.01, n = 35
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+
+#c = 0.01, n = 35, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+
+
+
+################################ n = 10
+
+#c = 0.05, n = 10
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(1/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10)
+
+#c = 0.05, n= 10, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(1/100, 99/100, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(1/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(99/100, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(0, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE)
+
+
+
+#c = 0.03, n = 10
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10)
+
+#c = 0.03, n = 10, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10)
+
+
+
+#c = 0.01, n = 10
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35)
+
+#c = 0.01, n = 10, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35)
+
+
+
+
+#################################################### w = 0.95
+
+#c = 0.05, n= 35
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(1/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=35, w=0.95)
+
+#c = 0.05, n= 35, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(1/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, thegame=sharing.game.exp, n=35, withcol=TRUE, w=0.95)
+
+
+
+#c = 0.03, n = 35
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+
+#c = 0.03, n = 35, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=35, w=0.95)
+
+
+
+#c = 0.01, n = 35
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+#c = 0.01, n = 35, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+
+
+################################ n = 10
+
+#c = 0.05, n = 10
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(1/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, n=10, w=0.95)
+
+#c = 0.05, n= 10, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(1/100, 0, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, thegame=sharing.game.exp, n=10, withcol=TRUE, w=0.95)
+
+
+
+#c = 0.03, n = 10
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+
+#c = 0.03, n = 10, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n = 10, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.03, n=10, w=0.95)
+
+
+
+#c = 0.01, n = 10
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=FALSE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+#c = 0.01, n = 10, withcol
+bary.init()
+bary.labels("Sharer","Loner","Hoarder")
+bary.plotsim(99/100, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(1/100, 99/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0.2/10, 0, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(99/100, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+bary.plotsim(0, 1/100, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n = 35, w=0.95)
+
+bary.plotsim(1/20, 1/10, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/2.3, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/1.5, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(1/20, 1/1.2, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+#bary.plotsim(1/20, 1/4, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+#bary.plotsim(1/20, 1/6, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+
+bary.plotsim(18/20, 1/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 0.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
+bary.plotsim(18/20, 1.5/20, arrow=TRUE, withcol=TRUE, thegame=sharing.game.exp, c=0.01, n=35, w=0.95)
 
 ################################
 
-h_jk_REVISAR <- function(p, j, k, n, B = 10, b = 1, gamma = 0.5){
-  h = 0
-  for ( l in 0:(j+1) ) {
-    h = h + binom(p, j+1, l) * ( ( ( l/(j+1) )*( B + ( (l-1)*B + (j+1-l)*b )/( n - k ) )^gamma ) + ( 1 - ( l/(j+1) ) )*( b + (l*B + (j-l)*b)/(n-k) )^gamma )
-  }
-  h
-}
+#h_jk_REVISAR <- function(p, j, k, n, B = 10, b = 1, gamma = 0.5){
+#  h = 0
+#  for ( l in 0:(j+1) ) {
+#    h = h + binom(p, j+1, l) * ( ( ( l/(j+1) )*( B + ( (l-1)*B + (j+1-l)*b )/( n - k ) )^gamma ) + ( 1 - ( l/(j+1) ) )*( b + (l*B + (j-l)*b)/(n-k) )^gamma )
+#  }
+#  h
+#}
 
-w_H(0, 0.5, 0.5, 50, B=20, gamma=0.5)
-v_L(0.5, B=20, gamma=0.5)
+#w_H(0, 0.5, 0.5, 50, B=20, gamma=0.5)
+#v_L(0.5, B=20, gamma=0.5)
+
+#library( help=baryplot )
+#?bary.plotsim
